@@ -30,4 +30,9 @@ public class Board {
     @Column(nullable = false)
     private String author;
 
+    public void updateBoard(String title, String content, String author) {
+        this.title = title;
+        this.content = content;
+        this.author = author;
+    }
 }
