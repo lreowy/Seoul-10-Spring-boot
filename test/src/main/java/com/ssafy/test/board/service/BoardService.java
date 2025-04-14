@@ -47,4 +47,10 @@ public class BoardService {
                 .author(board.getAuthor())
                 .build();
     }
+
+    public void deleteBoard(Long boardId) {
+        Board board = boardRepository.findById(boardId)
+                        .orElseThrow( () -> new RuntimeException("해당 게시물이 존재하지 않습니디ㅏ."));
+        boardRepository.delete(board);
+    }
 }
