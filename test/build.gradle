@@ -33,6 +33,8 @@ dependencies {
 
 	//h2 database 의존성 추가
 	runtimeOnly 'com.h2database:h2'
+	//mysql 의존성 추가
+	implementation 'mysql:mysql-connector-java:8.0.33'
 }
 
 tasks.named('test') {
